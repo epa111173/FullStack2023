@@ -1,0 +1,360 @@
+:root{
+    --colorbg2:#f8f0e9;
+    --colorfuente:#734432;
+    --colorsombra:#357C8C;
+    --colorbg:#f2c299;
+    --ancho-tarjeta:300px;
+    --alto-tarjeta:400px;
+    --bp450:451px;
+    --bp750:751px;
+}
+/*Maquetado para Mobile*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--colorfuente);
+}
+
+body{
+    background-color: var(--colorbg2);
+    width: 100vw;
+    height: 100%;
+}
+
+.cabecera{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    padding: 5px;
+}
+.cabecera .logo{
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    border-radius: 50%;
+    box-shadow: var(--colorfuente) 3px 5px 5px;
+}
+
+.cabecera .logo:hover{
+    transform: scale(1.1);
+}
+
+.cabecera .titulo{
+    color: var(--colorfuente);
+    text-align: center;
+    padding-top: 12px;
+    padding-left: 5px;
+    text-shadow: #357C8C 2px 3px 5px;
+    font-family: 'Tangerine', cursive;
+    font-size: 3em;
+}
+
+.banner{
+    width: 100%;
+    height: auto;
+    opacity: 35%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar .hamburguesa{
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+}
+
+.navbar .btnbuscar{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.navbar .menu-user{
+    display:none;
+}
+
+.navbar .menu-user .boton{
+    display: none;
+}
+
+.buscar2{
+    display: none;
+}
+
+.navbar .buscar{
+    border:inset;
+    background: white;
+    border-radius: 10px;
+    width: 80%;
+    height: 35px;
+    font-size: 20px;
+}
+
+.navbar .menu-user{
+    display: none;
+}
+
+.navbar2{
+    display: none;
+}
+
+body .descripcion{
+text-align: justify;
+margin: 10px;
+font-size: 18px;
+font-style: italic;
+font-weight: bolder;
+color:var(--colorfuente);
+border: 2px solid var(--colorfuente);
+padding: 5px;
+border-radius: 10px;
+}
+
+body .more{
+    background: var(--colorfuente);
+    width: 150px;
+    height: 30px;
+    color: white;
+    
+    font-weight: bolder;
+    text-align: center;
+    padding: 3px;
+    border-radius: 15px;
+    margin-left: 45%;
+    font-size: 1.2em;
+    transition: all 0.5s ease-in-out;
+}
+
+.more:hover{
+    background: white;
+    color: var(--colorfuente);
+    font-weight: bolder;
+}
+
+.contenido{
+    display:flex;
+    flex-wrap: wrap;
+    gap:15px;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 15px;
+    height: auto;
+    width: auto;
+}
+
+.contenido .tarjeta{
+    width: var(--ancho-tarjeta);
+    height: var(--alto-tarjeta);
+    border: 3px solid var(--colorfuente);
+    border-radius: 15px;
+    background: white;
+    margin: 5px;
+    box-shadow: black 5px 5px 5px;
+}
+
+.contenido .tarjeta:hover{
+    transform: scale(1.05);
+}
+
+.contenido .tarjeta .productos{
+    width: 100%;
+    height: 80%;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.precio{
+    background: var(--colorfuente);
+    height: 10%;
+    color: white;
+    padding: 2%;
+    font-size: 1.2em;
+}
+
+.concepto{
+    background: var(--colorfuente);
+    border-radius: 0px 0px 15px 15px;
+    height: 10%;
+    color: white;
+    padding: 1%;
+    font-size: 1.2em;
+}
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    background: black;
+    height: auto;
+    margin-top: 25px;
+    border-top: 4px inset white;
+}
+
+.pie1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:25px;
+}
+.pie2{
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie2 .texto{
+    color:white;
+    text-align: center;
+}
+
+footer .icono{
+    height: 40px;
+    cursor: pointer;
+}
+
+/*----------------------------------------------------------------------*/
+/*Maquetado para Tablet*/
+@media (min-width:501px){
+    .contenido .tarjeta{
+        width: calc(var(--ancho-tarjeta)/1.5);
+        height: calc(var(--alto-tarjeta)/1.5);
+    }
+
+    .contenido .tarjeta .precio{
+        font-size: 1em;
+    }
+
+    .contenido .tarjeta .concepto{
+        font-size: 1em;
+    }
+
+    .navbar .hamburguesa{
+        display: none;
+    }
+
+    .navbar .btnbuscar{
+        display: none;
+    }
+
+    .navbar .buscar{
+        display: none;
+    }
+
+    .navbar2{
+        display: inline;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+    }
+
+    .navbar2 .buscar2 {
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        height: 35px;
+        width: 85%;
+        border: inset;
+        border-radius: 10px;
+        margin-left: 5%;
+        background: white;
+    }
+
+    .navbar2 .btnbuscar2{
+        height: 35px;
+        width: 35px;
+        
+    }
+
+    .navbar .menu-user{
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    .navbar .menu-user .boton {
+        display: inline;
+        text-align: center;
+        width: 90px;
+        margin-left: 5%;
+        padding: 5px;
+        color: white;
+        font-weight: bolder;
+        border-radius: 15px;
+        background: var(--colorfuente);
+        transition: all 00.5s ease-in-out;
+    }
+
+    .navbar .menu-user .boton:hover{
+        background: white;
+        color: var(--colorfuente);
+    }
+
+    .cabecera .titulo {
+        color: var(--colorfuente);
+        text-align: center;
+        padding-top: 12px;
+        padding-left: 5px;
+        text-shadow: #357C8C 2px 3px 5px;
+        font-family: 'Tangerine', cursive;
+        font-size: 4em;
+    }
+}
+    /*----------------------------------------------------------------------*/
+/*Maquetado para PC*/
+
+@media (min-width:801px){
+    .cabecera .titulo {
+        color: var(--colorfuente);
+        text-align: center;
+        padding-top: 12px;
+        padding-left: 5px;
+        text-shadow: #357C8C 2px 3px 5px;
+        font-family: 'Tangerine', cursive;
+        font-size: 5em;
+    }
+    .navbar .menu-user .boton{
+        width: 150px;
+        background: white;
+        color: var(--colorfuente);
+        font-weight:900;
+        font-size: 20px;
+        text-transform: uppercase;
+        border-radius: 15px;
+    }
+
+    .navbar .menu-user .boton:hover{
+        width: 150px;
+        background: var(--colorfuente);
+        color: white;
+        font-weight: 900;
+        font-size: 20px;
+        text-transform: uppercase;
+        border-radius: 15px;
+    }
+
+    .navbar2{
+        display: flex;
+        height: 50px;
+    }
+
+    .navbar2 .btnbuscar2 {
+        height: 35px;
+        width: 35px;
+        margin-left: 5px;
+    }
+
+    body{
+        width: 98.7vw;
+    }
+
+    body .descripcion{
+        font-size: 2em;
+    }
+}
